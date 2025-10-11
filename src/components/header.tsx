@@ -52,8 +52,8 @@ export function HeaderMain() {
   ];
 
   return (
-    <>
-      <div className="w-full bg-black flex justify-between items-center container px-12 py-4">
+    <div className="w-full flex justify-center items-center">
+      <div className="w-full bg-black flex justify-between items-center px-12 py-4">
         <div className="flex justify-center items-center gap-4">
           <div className="w-18 h-18 relative flex justify-center items-center">
             <Image
@@ -155,6 +155,6 @@ export function HeaderMain() {
           })}
         </ul>
       </div>
-    </>
+    </div>
   );
 }

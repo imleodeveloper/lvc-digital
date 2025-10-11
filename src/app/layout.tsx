@@ -26,7 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${gogh.variable} antialiased`}>
+      <body
+        className={`${gogh.variable} antialiased flex flex-col justify-center items-center w-full`}
+      >
         <HeaderMain />
         {children}
       </body>

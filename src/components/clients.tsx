@@ -26,6 +26,10 @@ export function ClientsSection() {
       img: "/clientes/Doctor.png",
     },
     {
+      nome: "Fernanda Cutolo",
+      img: "/clientes/Fernanda-Cutolo.png",
+    },
+    {
       nome: "Gustavo Motta",
       img: "/clientes/Gustavo-motta.png",
     },
@@ -44,6 +48,10 @@ export function ClientsSection() {
     {
       nome: "Madame Brasil",
       img: "/clientes/Madame-brasil.png",
+    },
+    {
+      nome: "Mario Xuxa",
+      img: "/clientes/Mario-xuxa.png",
     },
     {
       nome: "Max Bell",
@@ -87,28 +95,42 @@ export function ClientsSection() {
         modules={[Autoplay, FreeMode]}
         loop={true}
         slidesPerView="auto"
-        spaceBetween={0}
+        spaceBetween={10}
+        freeMode={{
+          enabled: true,
+          momentum: false, // impede que ele trave ao final do swipe
+        }}
         autoplay={{
-          delay: 800,
+          delay: 800, // sem delay entre slides
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
-        freeMode={true}
-        className="w-full cursor-pointer transform hover:scale-110 transition-all duration-300"
+        speed={4000} // controla a velocidade da rolagem contínua
+        className="w-full cursor-pointer"
       >
         {clients.map((client) => {
           return (
-            <SwiperSlide key={client.img} className="!w-48 !h-48">
-              <div className="w-full h-full flex justify-center items-center relative">
+            <SwiperSlide
+              key={client.img}
+              className="!w-56 !h-56 !flex !flex-col !justify-center !items-center"
+            >
+              <div className="w-full h-[90%] flex justify-center items-center relative">
                 {client.img ? (
-                  <Image
-                    src={client.img}
-                    alt={client.nome}
-                    fill
-                    className="object-contain"
-                  />
+                  <>
+                    <Image
+                      src={client.img}
+                      alt={client.nome}
+                      fill
+                      className="object-contain"
+                    />
+                    {client.nome !== "VierCa Tech" && (
+                      <span className="mt-36 text-black text-lg font-semibold">
+                        {client.nome}
+                      </span>
+                    )}
+                  </>
                 ) : (
-                  <div className="w-full h-full flex justify-center items-center bg-black rounded-full border border-orange-600">
+                  <div className="w-full h-[90%] flex justify-center items-center bg-black rounded-full border border-orange-600">
                     <ImageOff className="w-12 h-12 text-white" />{" "}
                   </div>
                 )}

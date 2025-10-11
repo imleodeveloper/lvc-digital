@@ -1,12 +1,11 @@
-import { ClientsSection } from "@/components/hero-section/clients";
+import { ClientsSection } from "@/components/clients";
 import { HeroSection } from "@/components/hero-section/section";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <>
+    <main className="w-full">
       <HeroSection />
       <ClientsSection />
-    </>
+    </main>
   );
 }
