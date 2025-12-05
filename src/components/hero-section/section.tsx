@@ -1,8 +1,48 @@
-import { MoveRight, Play } from "lucide-react";
+"use client";
 
+import { MoveRight, Play } from "lucide-react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export function HeroSection() {
+  const imageRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const isDesktop = window.innerWidth >= 1024;
+
+    if (!isDesktop || !imageRef.current) return;
+
+    gsap.fromTo(
+      imageRef.current,
+      {
+        x: 200,
+        y: 100,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: imageRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
     <div className="w-full bg-orange-overlay min-h-screen relative">
       <div className="w-full h-full bg-gradient-to-b from-black from-[0%] to-transparent to-[70%] absolute top-0 left-0"></div>
@@ -79,7 +119,10 @@ export function HeroSection() {
           </div>
         </div>
         <div className="w-full flex justify-start items-end flex-col relative">
-          <div className="w-96 h-[46rem] relative animate-up-and-down fade-bottom">
+          <div
+            ref={imageRef}
+            className="w-96 h-[46rem] relative animate-up-and-down fade-bottom"
+          >
             <Image
               src="/Lucas-Vieira-Carvalho.webp"
               alt="Lucas Vieira - LVC Digital - Marketing Digital & Design - Gestor de Tráfego"

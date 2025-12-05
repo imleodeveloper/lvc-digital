@@ -154,6 +154,15 @@ body {
   }
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 @layer utilities {
   .fade-bottom {
     -webkit-mask-image: linear-gradient(
@@ -237,6 +246,18 @@ body {
     opacity: 0.7;
     z-index: -1;
   }
+  .bg-orange-overlay-no-overflow {
+    position: relative;
+  }
+
+  .bg-orange-overlay-no-overflow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, #5a514c, #825d51);
+    opacity: 0.7;
+    z-index: -1;
+  }
 
   .orange-ball {
     position: absolute;
@@ -252,5 +273,15 @@ body {
     mix-blend-mode: screen;
     animation: orangeFloat 30s ease-in-out infinite alternate;
     z-index: -1;
+  }
+
+  .bg-squares {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 0 0;
   }
 }

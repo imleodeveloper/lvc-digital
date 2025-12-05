@@ -64,7 +64,7 @@ export function HeaderMain() {
           </div>
           <div className="hidden lg:flex flex-col justify-center items-start gap-1">
             <span className="text-white font-extrabold text-2xl">
-              Phoenix Digital
+              LVC Digital
             </span>
             <span className="text-gray-400 font-normal text-sm">
               Marketing & Design
