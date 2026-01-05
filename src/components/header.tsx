@@ -25,7 +25,7 @@ export function HeaderMain() {
         </div>
         <div className="flex justify-center items-center gap-4">
           <a
-            href="https://wa.me/5511963404230?text=Olá%20vim%20do%20site%20da%20LVC"
+            href="https://wa.link/w9o256"
             target="_blank"
             rel="noopener noreferrer"
             className="cursor-pointer flex justify-center items-center gap-1 rounded-sm px-4 py-2 bg-orange-reflex font-bold text-white transition-all duration-300 transform hover:brightness-[200%] hover:text-black hover:scale-105"

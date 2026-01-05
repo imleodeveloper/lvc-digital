@@ -81,7 +81,7 @@ export function HeroSection() {
           {/* </AnimatedCopy> */}
           <div className="flex justify-start items-start flex-col sm:flex-row gap-4 pb-6 border-b border-black/20 w-full">
             <a
-              href="https://wa.me/5511963404230?text=Olá%20vim%20do%20site%20da%20LVC"
+              href="https://wa.link/w9o256"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto pl-4 pr-6 py-2 flex justify-center items-center gap-6 rounded-sm animate-pulse-orange bg-orange-reflex font-semibold hover:brightness-[200%] transition-all duration-300 group"

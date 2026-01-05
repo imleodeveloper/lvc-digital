@@ -78,7 +78,7 @@ export function ContactSection() {
                 e vamos conversar sobre suas necessidades.
               </p>
               <a
-                href="https://wa.me/5511963404230?text=Olá%20vim%20do%20site%20da%20LVC"
+                href="https://wa.link/w9o256"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-6 py-3 bg-orange-reflex text-white font-bold rounded-lg hover:brightness-110 transition-all duration-300"
@@ -121,7 +121,7 @@ export function ContactSection() {
                   <div>
                     <p className="text-white/50 text-sm">WhatsApp</p>
                     <a
-                      href="https://wa.me/5511963404230?text=Olá%20vim%20do%20site%20da%20LVC"
+                      href="https://wa.link/w9o256"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-white hover:text-main-orange transition-colors"
@@ -161,7 +161,7 @@ export function ContactSection() {
                 </div>
               </div>
               <a
-                href="https://wa.me/5511963404230?text=Olá%20vim%20do%20site%20da%20LVC"
+                href="https://wa.link/w9o256"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3 px-6 bg-orange-reflex text-white font-bold rounded-lg hover:brightness-110 transition-all duration-300 inline-block text-center"
@@ -190,7 +190,7 @@ export function ContactSection() {
                 </div>
               </div>
               <a
-                href="https://wa.me/5511963404230?text=Olá%20vim%20do%20site%20da%20LVC"
+                href="https://wa.link/w9o256"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3 px-6 bg-orange-reflex text-white font-bold rounded-lg hover:brightness-110 transition-all duration-300 inline-block text-center"
