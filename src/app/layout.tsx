@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Phoenix Digital",
-  description: "Experiência no Marketing Digital",
+  title: "LVC Digital",
+  description: "Marketing Digital & Design - Gestor de Tráfego",
 };
 
 export default function RootLayout({
