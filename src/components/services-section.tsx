@@ -265,7 +265,7 @@ export function ServicesSection() {
               className="relative w-full mb-4 rounded-lg overflow-hidden"
             >
               <Image
-                src="/services.png"
+                src="/services.webp"
                 alt="Serviços LVC Digital"
                 width={600}
                 height={400}

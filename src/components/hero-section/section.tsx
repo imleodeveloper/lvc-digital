@@ -1,6 +1,6 @@
 "use client";
 
-import { MoveRight, Play } from "lucide-react";
+import { MoveRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -81,19 +81,21 @@ export function HeroSection() {
           {/* </AnimatedCopy> */}
           <div className="flex justify-start items-start flex-col sm:flex-row gap-4 pb-6 border-b border-black/20 w-full">
             <a
-              href="#"
+              href="https://wa.me/5511963404230?text=Olá%20vim%20do%20site%20da%20LVC"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto pl-4 pr-6 py-2 flex justify-center items-center gap-6 rounded-sm animate-pulse-orange bg-orange-reflex font-semibold hover:brightness-[200%] transition-all duration-300 group"
             >
               <span>Começar Agora</span>
               <MoveRight className="w-6 h-6 transform group-hover:translate-x-2 transition-all duration-300" />
             </a>
-            <a
+            {/* <a
               href="#"
               className="w-full sm:w-auto px-4 py-2 flex justify-center items-center border-2 border-gray-300 bg-transparent hover:bg-[#FAEBE1] hover:text-black gap-2 rounded-sm text-white font-semibold hover:brightness-[200%] transition-all duration-300 group"
             >
               <Play className="w-5 h-5 transform group-hover:translate-x-1 transition-all duration-300" />
               <span>Ver Portfólio</span>
-            </a>
+            </a> */}
           </div>
           <div className="grid grid-cols-3 justify-items-center sm:justify-items-start w-full">
             <div className="flex justify-start items-start gap-1 flex-col">

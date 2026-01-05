@@ -4,24 +4,26 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Autoplay, FreeMode } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
-import "swiper/css/free-mode";
 import "swiper/css/autoplay";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function ClientsSection() {
-  const swiperRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
     const isDesktop = window.innerWidth >= 1024;
 
-    if (!isDesktop || !swiperRef.current) return;
+    if (!isDesktop || !containerRef.current) return;
 
-    const slides = swiperRef.current.querySelectorAll(".swiper-slide");
+    const container = containerRef.current;
+    const slides = container.querySelectorAll(".swiper-slide");
 
     slides.forEach((slide, index) => {
       gsap.fromTo(
@@ -37,9 +39,8 @@ export function ClientsSection() {
           delay: index * 0.1,
           ease: "power2.out",
           scrollTrigger: {
-            trigger: slide,
-            start: "top 90%",
-            scrub: true,
+            trigger: container,
+            start: "top 80%",
             toggleActions: "play none none none",
           },
         }
@@ -47,7 +48,11 @@ export function ClientsSection() {
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => {
+        if (trigger.vars.trigger === container) {
+          trigger.kill();
+        }
+      });
     };
   }, []);
   const clients = [
@@ -134,25 +139,34 @@ export function ClientsSection() {
       <p className="text-white/50 text-lg text-center">
         Mais de 50 projetos realizados com sucesso em diversos segmentos
       </p>
-      <div ref={swiperRef}>
+      <div ref={containerRef} className="w-full overflow-hidden">
         <Swiper
-          modules={[Autoplay, FreeMode]}
+          modules={[Autoplay]}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
           loop={true}
           slidesPerView="auto"
-          spaceBetween={10}
-          freeMode={{
-            enabled: true,
-            momentum: false, // impede que ele trave ao final do swipe
-          }}
+          spaceBetween={24}
           autoplay={{
-            delay: 800, // sem delay entre slides
+            delay: 2000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
-          speed={4000} // controla a velocidade da rolagem contínua
+          speed={1000}
+          allowTouchMove={true}
+          grabCursor={true}
           className="w-full cursor-pointer"
+          breakpoints={{
+            640: {
+              spaceBetween: 32,
+            },
+            1024: {
+              spaceBetween: 40,
+            },
+          }}
         >
-          {clients.map((client) => {
+          {clients.map((client, index) => {
             return (
               <SwiperSlide
                 key={client.img}

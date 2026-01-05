@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, MapPin, MessageCircle, Calendar, Handshake } from "lucide-react";
+import { Mail, MessageCircle, Calendar, Handshake } from "lucide-react";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -77,14 +77,17 @@ export function ContactSection() {
                 Pronto para levar seu negócio ao próximo nível? Entre em contato
                 e vamos conversar sobre suas necessidades.
               </p>
-              <button
-                className="px-6 py-3 bg-orange-reflex text-white font-bold rounded-lg hover:brightness-110 transition-all duration-300"
+              <a
+                href="https://wa.me/5511963404230?text=Olá%20vim%20do%20site%20da%20LVC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 bg-orange-reflex text-white font-bold rounded-lg hover:brightness-110 transition-all duration-300"
                 style={{
                   animation: "orangeReflex 5s ease-in-out infinite",
                 }}
               >
                 Entre em Contato
-              </button>
+              </a>
             </div>
 
             <div>
@@ -103,10 +106,10 @@ export function ContactSection() {
                   <div>
                     <p className="text-white/50 text-sm">Email</p>
                     <a
-                      href="mailto:contato@phoenixdigital.com"
+                      href="mailto:lucasempresalvc@gmail.com"
                       className="text-white hover:text-main-orange transition-colors"
                     >
-                      contato@phoenixdigital.com
+                      lucasempresalvc@gmail.com
                     </a>
                   </div>
                 </div>
@@ -118,23 +121,13 @@ export function ContactSection() {
                   <div>
                     <p className="text-white/50 text-sm">WhatsApp</p>
                     <a
-                      href="https://wa.me/5511999999999"
+                      href="https://wa.me/5511963404230?text=Olá%20vim%20do%20site%20da%20LVC"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-white hover:text-main-orange transition-colors"
                     >
-                      (11) 99999-9999
+                      (11) 96340-4230
                     </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-main-orange" />
-                  </div>
-                  <div>
-                    <p className="text-white/50 text-sm">Localização</p>
-                    <p className="text-white">São Paulo, Brasil</p>
                   </div>
                 </div>
               </div>
@@ -167,14 +160,17 @@ export function ContactSection() {
                   </p>
                 </div>
               </div>
-              <button
-                className="w-full py-3 px-6 bg-orange-reflex text-white font-bold rounded-lg hover:brightness-110 transition-all duration-300"
+              <a
+                href="https://wa.me/5511963404230?text=Olá%20vim%20do%20site%20da%20LVC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3 px-6 bg-orange-reflex text-white font-bold rounded-lg hover:brightness-110 transition-all duration-300 inline-block text-center"
                 style={{
                   animation: "orangeReflex 5s ease-in-out infinite",
                 }}
               >
                 Agendar Consultoria
-              </button>
+              </a>
             </div>
 
             {/* Card Fechar Parceria */}
@@ -193,14 +189,17 @@ export function ContactSection() {
                   </p>
                 </div>
               </div>
-              <button
-                className="w-full py-3 px-6 bg-orange-reflex text-white font-bold rounded-lg hover:brightness-110 transition-all duration-300"
+              <a
+                href="https://wa.me/5511963404230?text=Olá%20vim%20do%20site%20da%20LVC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3 px-6 bg-orange-reflex text-white font-bold rounded-lg hover:brightness-110 transition-all duration-300 inline-block text-center"
                 style={{
                   animation: "orangeReflex 5s ease-in-out infinite",
                 }}
               >
                 Solicitar Proposta
-              </button>
+              </a>
             </div>
           </div>
         </div>
